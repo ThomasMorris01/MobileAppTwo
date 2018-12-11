@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
     private CharacterController controller;
     private Vector3 moveVector;
 
-    private float speed = 3.0f;
+    private float speed = 4.0f;
     private float verticalVelocity = 0.0f;
     private float gravity = 12.0f;
     private float jump = 4.0f;
@@ -41,10 +41,9 @@ public class BallController : MonoBehaviour
         // Z - Forward and Backward
         moveVector.z = speed;
         
-
-
         controller.Move (moveVector * Time.deltaTime);
-
-        
+               
 	}
+
+
 }
