@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
@@ -32,7 +30,7 @@ public class BallController : MonoBehaviour
         moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
 
         // Y - Up and Down
-        if (Input.GetKeyDown(KeyCode.UpArrow) && controller.isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && controller.isGrounded)
         {
             verticalVelocity = jump;
         }

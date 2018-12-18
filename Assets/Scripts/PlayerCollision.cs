@@ -2,14 +2,22 @@
 
 public class PlayerCollision : MonoBehaviour {
 
-    public BallController controller;
+    public PlayerMovement movement;
 
-    void OnCollisionEnter(Collision collisionInfo) {
-        if (collisionInfo.collider.tag == "RestartTrigger")
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Restart")
         {
-            controller.enabled = false;
+            movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
+        }
+
+        if (collisionInfo.collider.tag == "Obstacle")
+        {
+            movement.enabled = false;
             FindObjectOfType<GameManager>().EndGame();
             
         }
-     }
+
+    }
 }
