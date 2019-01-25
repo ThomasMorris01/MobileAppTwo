@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class PlayerCollision : MonoBehaviour {
     {
         if (collisionInfo.collider.tag == "Restart")
         {
-            movement.enabled = false;
+            movement.enabled = false;          
             FindObjectOfType<GameManager>().EndGame();
         }
 
@@ -18,6 +19,8 @@ public class PlayerCollision : MonoBehaviour {
             FindObjectOfType<GameManager>().EndGame();
             
         }
+
+
 
     }
 }
